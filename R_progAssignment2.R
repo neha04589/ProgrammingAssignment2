@@ -1,11 +1,14 @@
 makeCacheMatrix <- function(x = matrix()) 
-{ ## This function creates a special "matrix" object that can cache its inverse
+{ 
+    ## This function creates a special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) 
-{ ## define the argument with default mode of "matrix"
+{ 
+    ## define the argument with default mode of "matrix"
     inv <- NULL                            
  ## initialize inv as NULL; will hold value of matrix inverse 
-    set <- function(y) {                    
+    set <- function(y) 
+    {                    
 ## define the set function to assign new value of matrix in parent environment
         x <<- y                             
         inv <<- NULL                        
@@ -39,3 +42,4 @@ cacheSolve <- function(x, ...)
     x$setinverse(inv)
     inv
 }
+    
